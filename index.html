@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/42696fbbae.js" crossorigin="anonymous"></script>
+    <title>ARCHERS DELIVERABLE</title>
+    <script src="script.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("5A7nE4A9eKeospPJF");
+        })();
+    </script>
+</head>
+
+<body>
+    <section id="landing-page" onmousemove="moveBackground(event)">
+        <nav>
+            <figure>
+                <img id="personal-logo" src="./assets/ARCH-LOGO-REBRANDED.png">
+            </figure>
+            <ul class="nav__link--list">
+                <li class="nav__link" onclick="toggleModal()">
+                    <a href="#" class="
+                    nav__link--anchor
+                    link__hover-effect
+                    link__hover-effect--black
+                    ">About</a>
+                </li>
+                <li class="nav__link">
+                    <a href="#posts" class="
+                    nav__link--anchor
+                    link__hover-effect
+                    link__hover-effect--black
+                    ">Posts</a>
+                </li>
+                <li class="nav__link" onclick="toggleModal()">
+                    <a href="#" class="
+                    nav__link--anchor
+                    link__hover-effect
+                    link__hover-effect--black
+                    ">Contact</a>
+                </li>
+                <li class="nav__link click" onClick="toggleContrast()">
+                    <a href="#" class="
+                    nav__link--anchor
+                    link__hover-effect
+                    link__hover-effect--black
+                    "><i class="fa-solid fa-toggle-off"></i></a>
+                </li>
+            </ul>
+        </nav>
+        <header class="header">
+            <div class="header__content">
+                <h1 class="title">Welcome to</h1>
+                <h1 class="title green">Archers Network</h1>
+            </div>
+        </header>
+        <a href="#">
+            <button class="mail__btn click" onclick="toggleModal()">
+                <i class="fa-solid fa-envelope"></i>
+            </button>
+        </a>
+        <a href="#posts" class="scroll">
+            <div class="scroll__icon click">
+            </div>
+        </a>
+        <div class="modal">
+            <div class="modal__half modal__about">
+                <h3 class="modal__title modal__title--about">Here's a bit more about us.</h3>
+                <h4 class="modal__sub-title modal__sub-title--about">What  is Archer's Network?</h4>
+                <p class="modal__para">
+                    Archers Network is the <b class="green">PREMIER online television network organization of De La Salle University</b>, made for Lasallians, by Lasallians. We serve as a <b class="green click">broadcast medium to the Lasallian community</b> through social media. 
+                    <br>
+                    <br>
+                    Through the five channels: <b class="green">Advertisements, Entertainment, Events, News & Current Affairs, and Sports & Culture</b>, we focus on producing relevant, informative, and entertaining content. 
+                </p>
+            </div>
+            <div class="modal__half modal__contact">
+                <i class="fa-solid fa-xmark modal__exit click" onclick="toggleModal()" style="color: #f6f8f8;"></i>
+                <h3 class="modal__title modal__title--contact">
+                    Let's have a chat!
+                </h3>
+                <h3 class="modal__sub-title modal__sub-title--contact">
+                    Talk to us about your talents.
+                    <h3>
+                        <form id="contact__form" onsubmit="contact(event)">
+                            <div class="form__item">
+                                <label class="form__item--label">Name</label>
+                                <input class="input" name="user_name" type="text"></input>
+                            </div>
+                            <div class="form__item">
+                                <label class="form__item--label">Email</label>
+                                <input class="input" name="user_email" type="email"></input>
+                            </div>
+                            <div class="form__item">
+                                <label class="form__item--label">Message</label>
+                                <textarea class="input" name="message" type="text"></textarea>
+                            </div>
+                            <button id="contact__submit" class="form__submit">
+                                Send it our way!
+                            </button>
+                        </form>
+                        <div class="modal__overlay modal__overlay--loading">
+                            <i class="fa-solid fa-spinner fa-spin fa-spin-reverse" style="color: #4dc23d;"></i>
+                        </div>
+                        <div class="modal__overlay modal__overlay--success">
+                            Thank you for reaching out, we will get back to you soon!
+                        </div>
+            </div>
+        </div>
+
+        <img src="./assets/semi circle.svg" class="shape shape--0">
+        <img src="./assets/circle.svg" class="shape shape--1">
+        <img src="./assets/squiggly.svg" class="shape shape--2">
+        <img src="./assets/circle.svg" class="shape shape--3">
+        <img src="./assets/semi circle.svg" class="shape shape--5">
+        <img src="./assets/squiggly.svg" class="shape shape--6">
+        <img src="./assets/circle.svg" class="shape shape--7">
+        <img src="./assets/semi circle.svg" class="shape shape--8">
+
+    </section>
+    <section id="posts">
+        <div class="container">
+            <div class="row">
+                <span class="typewriter">
+                    <h1 class="section__title">
+                        Featured <span class="green">posts</span>
+                </span>
+                </h1>
+                <ul class="post__list">
+                    <li class="post">
+                        <div class="post__wrapper">
+                            <img src="./assets/SWEET-SILVER.jpg" class="post__img">
+                            <div class="post__wrapper--bg"></div>
+                            <div class="post__description">
+                                <h3 class="post__description--title">
+                                    V-LEAGUE FINALS GAME 3 DLSU VS FEU
+                                </h3>
+                                <h4 class="post__description--sub-title">
+                                    SWEET SILVER IT IS!
+                                </h4>
+                                <p class="post__description--para">
+                                    The DLSU Green Spikers gave up their throne and got silver as they were trampled by the FEU Tamaraws in Finals Game 3 of the V-League Collegiate Challenge, 0-3 (22-25, 26-28, 18-25), today, October 4, at the PhilSports Arena.
+                                </p>
+                                <div class="post__description--links">
+                                    <a href="https://www.facebook.com/share/p/udi7DfPtFPxf1aHZ/"
+                                        class="post__description--link" target="_blank">
+                                        <i class="fa-solid fa-link"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="post">
+                        <div class="post__wrapper">
+                            <img src="./assets/MARCOS.png" class="post__img">
+                            <div class="post__wrapper--bg"></div>
+                            <div class="post__description">
+                                <h3 class="post__description--title">
+                                    COMMEMORATION OF MARTIAL LAW DECLERATION
+                                </h3>
+                                <h4 class="post__description--sub-title">
+                                    VARIOUS GROUPS COMMEMORATE 52ND ANNIVERSARY OF MARTIAL LAW DECLARATION
+                                </h4>
+                                <p class="post__description--para">
+                                    DLSU and multiple progressive groups took part in the commemoration of the 52nd anniversary of Ferdinand Marcos Sr.’s Martial Law Declaration last September 21.
+                                </p>
+                                <div class="post__description--links">
+                                    <a href="https://www.facebook.com/share/v/yBvJP9b6knaihBNV/" class="post__description--link"
+                                        target="_blank">
+                                        <i class="fa-solid fa-link"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="post">
+                        <div class="post__wrapper">
+                            <img src="./assets/SMILE-DAY.jpg" class="post__img">
+                            <div class="post__wrapper--bg"></div>
+                            <div class="post__description">
+                                <h3 class="post__description--title">
+                                    WORLD SMILE DAY
+                                </h3>
+                                <h4 class="post__description--sub-title">
+                                    SAY CHEESE!
+                                </h4>
+                                <p class="post__description--para">
+                                    Show us your pearly whites today on World Smile Day! Held every first Friday of October, this day is dedicated to encouraging people to be kind and making other people smile. Today, we invite you to do an act of kindness and put a smile on someone’s face! 
+                                </p>
+                                <div class="post__description--links">
+                                    <a href="https://www.facebook.com/share/p/MFfpYYpkfG45PQxW/"
+                                        class="post__description--link" target="_blank">
+                                        <i class="fa-solid fa-link"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <div class="row footer__row">
+
+
+                <figure>
+                    <img class="footer__logo--img" src="./assets/ARCH-LOGO-REBRANDED.png">
+                </figure>
+                <div class="footer__social--list">
+                    <a href="https://www.facebook.com/ArchersNetwork" target="_blank" class="
+                footer__social--link
+                link__hover-effect
+                link__hover-effect--white
+                ">
+                        Facebook
+                    </a>
+                    <a href="https://www.instagram.com/archersnetwork/?hl=en" target="_blank" class="
+            footer__social--link
+            link__hover-effect
+            link__hover-effect--white
+            ">
+                        Instagram
+                    </a>
+                    <a href="#" onclick="toggleModal()" class="
+        footer__social--link
+        link__hover-effect
+        link__hover-effect--white
+        ">
+                        Contact Us
+                    </a>
+                </div>
+                <div class="footer__copyright">Made by Angela Que</div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
